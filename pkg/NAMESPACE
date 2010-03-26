@@ -1,0 +1,34 @@
+#useDynLib(kml)
+
+export(
+       ## Partition
+       "partition","ordered",
+       ## ParLongData
+       "parLongData","parTraj","parMean","expandParLongData",
+       ## parWindows
+       "parWindows","windowsCut",
+       ## LongData
+       "longData","as.longData","as.longData.data.frame","as.longData.array",
+       "plot","plot3d","resizePartition","calculTrajMean",#"calculTrajMeanPoint"
+       "imputation","scale","restaureRealData",
+       ## Clustering
+       "clustering","calculCriterion",
+       ## ListClustering
+       "listClustering","regroupSameClustering",
+       ## ClusterLongData
+       "clusterLongData","cld","as.clusterLongData","as.cld"
+       )
+
+exportMethods()
+
+exportClasses(
+              "Partition",
+              "ParLongData",
+              "ParWindows",
+              "LongData",
+              "Clustering",
+              "ListClustering",
+              "ClusterLongData"
+              )
+
+import(methods,graphics,rgl)
